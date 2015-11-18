@@ -4,6 +4,7 @@ package actors
 	import flash.events.Event;
 	import flash.geom.Point;
 	import flash.display.Stage;
+	import flash.net.SharedObject;
 	import flash.utils.Timer;
 	import flash.events.TimerEvent;
 	import utils.MovementCalculator;
@@ -17,6 +18,7 @@ package actors
 		public static const OUTSIDE_RIGHT:String = "outside right";
 		public static const OUTSIDE_LEFT:String = "outside left";
 		public function set movement(m:Point):void
+		var SharedData: SharedObject;
 		{
 			_movement = m;
 		}
@@ -42,6 +44,10 @@ package actors
 			addChild(new BallArt());
 			movement = new Point(0, 0);
 			this.addEventListener(Event.ENTER_FRAME, loop);
+			
+			SharedObject.getLocal ("High_Score");
+			if (Shared.data.highscore == null){
+			SharedData.data.highscore = 0;
 		}
 		public function reset():void
 		{
@@ -55,7 +61,7 @@ package actors
 		
 		private function restart(e:TimerEvent):void 
 		{
-			_movement = MovementCalculator.calculateMovement(15 + Math.random() * 10, Math.random() * 360);
+			_movement = MovementCalculator.calculateMovement(5 + Math.random() * 1, Math.random() * 360);
 			if (_movement.x > 0 && _movement.x < 2) _movement.x += 2;
 			if (_movement.x < 0 && _movement.x > -2) _movement.x -= 2;
 		}
