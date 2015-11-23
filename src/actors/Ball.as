@@ -18,7 +18,7 @@ package actors
 		public static const OUTSIDE_RIGHT:String = "outside right";
 		public static const OUTSIDE_LEFT:String = "outside left";
 		public function set movement(m:Point):void
-		var SharedData: SharedObject;
+		//var SharedData: SharedObject;
 		{
 			_movement = m;
 		}
@@ -45,9 +45,6 @@ package actors
 			movement = new Point(0, 0);
 			this.addEventListener(Event.ENTER_FRAME, loop);
 			
-			SharedObject.getLocal ("High_Score");
-			if (Shared.data.highscore == null){
-			SharedData.data.highscore = 0;
 		}
 		public function reset():void
 		{
@@ -83,6 +80,8 @@ package actors
 			{
 				dispatchEvent(new Event(Ball.OUTSIDE_LEFT));
 			}
+			
+			
 		}
 		public function destroy():void
 		{
