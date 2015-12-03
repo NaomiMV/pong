@@ -14,6 +14,10 @@ package actors
 	 */
 	public class Ball extends MovieClip 
 	{
+		//[Embed(source = "../../lib/Assets.swc", symbol = "BallArt")][Embed(source = "../../lib/Assets.swc", symbol = "BallArt")]
+		
+
+		
 		private var _movement:Point;
 		public static const OUTSIDE_RIGHT:String = "outside right";
 		public static const OUTSIDE_LEFT:String = "outside left";
