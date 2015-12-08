@@ -30,7 +30,7 @@ package screens
 		private function init(e:Event):void 
 		{
 			removeEventListener(Event.ADDED_TO_STAGE, init);
-				for (var i:int = 0; i < 2; i++) 
+				for (var i:int = 0; i < 4; i++) 
 			{
 				balls.push(new Ball());
 				addChild(balls[i]);
@@ -48,7 +48,7 @@ package screens
 				
 				addChild(paddles[i]);
 				paddles[i].y = stage.stageHeight / 2;
-			}	
+  }	
 			paddles[0].x = stage.stageWidth - 100;
 			
 			paddles[1].x = 100;
