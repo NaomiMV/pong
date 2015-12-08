@@ -33,9 +33,22 @@ package screens
 			title.setTextFormat(textFormat);		
 			
 			title.x = stage.stageWidth / 2 - title.textWidth /2;
-			title.y = stage.stageHeight / 2 - title.textHeight /2;
+			title.y = stage.stageHeight / 2 - title.textHeight / 2;
 			
 			title.mouseEnabled = false;
+			
+			addChild(title);
+			
+			
+			title = new TextField();
+			title.embedFonts = true;
+			title.text = "Try Again?";
+			title.autoSize = TextFieldAutoSize.CENTER;			
+			title.setTextFormat(subFormat);		
+			
+			title.x = stage.stageWidth / 2 - title.textWidth / 2;
+			title.y = stage.stageHeight / 2 + 20;
+			
 			
 			addChild(title);
 			
