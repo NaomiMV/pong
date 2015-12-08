@@ -50,6 +50,7 @@ package screens
 			title.y = stage.stageHeight / 2 + 20;
 			
 			
+			
 			addChild(title);
 			
 			stage.addEventListener(KeyboardEvent.KEY_UP, reset);
@@ -78,10 +79,13 @@ package screens
 				timer.stop();
 				dispatchEvent(new Event(RESET));
 				
+				
+			
+		}
+				
 			}
 		
 		}
 		
 	}
 
-}
