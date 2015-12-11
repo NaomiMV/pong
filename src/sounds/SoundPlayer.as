@@ -24,12 +24,18 @@ package sounds
 			loadSound("../lib/pong2.mp3");			
 			loadSound("../lib/pong3.mp3");	
 			loadSound("../lib/lose.mp3");	
-			loadSound("../lib/intro.mp3");	
+			loadSound("../lib/intro.mp3");
+			loadSound("../lib/background.mp3");
 						
 			_main.addEventListener(GameScreen.BALL_BOUNCE, onBounce, true);
 			_main.addEventListener(GameScreen.GAME_OVER, onGameOver, true);
 			_main.addEventListener(IntroScreen.START_GAME, onIntro, true);
-			
+			_main.addEventListener(IntroScreen.START_GAME,startGame, true);
+		}
+		
+		private function startGame(e:Event):void
+		{ 
+			playSound(5);
 		}
 		
 		private function onIntro(e:Event):void 
