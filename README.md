@@ -20,4 +20,6 @@ type: git commit -m "comment on your change to the code"
 Then push your changed version of the code back to your github account
 type:git push
 
+in de "toevoegings.doc kan je de link van mijn Github acc vinden 
+
 
